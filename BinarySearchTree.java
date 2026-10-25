@@ -6,7 +6,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         root = null;
     }
 
-    // Phase 1: Insert elements into BST
+    // Phase 1: Insert elements
     public void add(T element) {
         root = recAdd(element, root);
     }
@@ -33,16 +33,51 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     private int recHeight(BSTNode<T> node) {
 
-        // Empty tree has height -1
         if (node == null) {
             return -1;
         }
 
-        // Calculate left and right subtree heights
         int leftHeight = recHeight(node.getLeft());
         int rightHeight = recHeight(node.getRight());
 
-        // Return height of deepest branch
         return 1 + Math.max(leftHeight, rightHeight);
+    }
+
+    // Phase 3: Inorder Traversal
+    public void inOrderTraversal() {
+        recInOrder(root);
+        System.out.println();
+    }
+
+    private void recInOrder(BSTNode<T> node) {
+
+        if (node == null) {
+            return;
+        }
+
+        recInOrder(node.getLeft());
+
+        System.out.print(node.getInfo() + " ");
+
+        recInOrder(node.getRight());
+    }
+
+    // Phase 3: Preorder Traversal
+    public void preOrderTraversal() {
+        recPreOrder(root);
+        System.out.println();
+    }
+
+    private void recPreOrder(BSTNode<T> node) {
+
+        if (node == null) {
+            return;
+        }
+
+        System.out.print(node.getInfo() + " ");
+
+        recPreOrder(node.getLeft());
+
+        recPreOrder(node.getRight());
     }
 }
