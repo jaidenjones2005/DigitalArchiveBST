@@ -12,3 +12,15 @@ The Comparable interface is required because it allows the tree to compare gener
 
 I tested the program by inserting seven sample accession IDs and confirming that the program ran successfully.
 
+## Phase 2: Archive Depth (Tree Height)
+
+In Phase 2, I added a height() method to the BinarySearchTree class to calculate the maximum depth of the tree.
+
+The method uses recursion to examine both the left and right subtrees. When it reaches a null node, it returns -1. Otherwise, it calculates the height of each subtree and adds one to the larger value.
+
+This allows the program to find the deepest branch of the tree. The root starts at Level 0, and each additional level increases the height by one.
+
+I tested the method using the seven sample accession IDs and confirmed that the tree height was 2.
+
+This phase helped me understand how recursive methods can break a tree into smaller subtrees to calculate its overall height.
+
