@@ -24,3 +24,15 @@ I tested the method using the seven sample accession IDs and confirmed that the 
 
 This phase helped me understand how recursive methods can break a tree into smaller subtrees to calculate its overall height.
 
+## Phase 3: Catalog Audits (Traversals)
+
+In Phase 3, I implemented Inorder and Preorder traversal methods in the BinarySearchTree class.
+
+The Inorder traversal visits the left subtree first, then the current node, and finally the right subtree. Because a Binary Search Tree stores smaller values on the left and larger values on the right, this traversal naturally prints the accession IDs in ascending order.
+
+The Preorder traversal visits the current node first, followed by its left and right subtrees. This allows the program to display the hierarchical structure of the tree.
+
+I tested both traversal methods using the seven sample accession IDs and verified that the results matched the expected order.
+
+This phase helped me understand how recursion can visit tree nodes in different sequences without changing the underlying tree structure.
+

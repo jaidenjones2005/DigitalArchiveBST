@@ -36,3 +36,21 @@ I tested both traversal methods using the seven sample accession IDs and verifie
 
 This phase helped me understand how recursion can visit tree nodes in different sequences without changing the underlying tree structure.
 
+## Phase 4: Validation and Reflection
+
+In Phase 4, I tested the Binary Search Tree using several edge cases to verify that the recursive methods work correctly.
+
+First, I tested an empty tree and confirmed that its height was -1. Both traversal methods completed without crashing because they correctly handled null nodes.
+
+Next, I tested a single-node tree and confirmed that its height was 0.
+
+I also created a skewed tree by inserting the values 10, 20, 30, and 40 in ascending order. This caused every new node to become the right child of the previous node, producing a tree with a height of 3.
+
+Compared to the original sample tree, which had seven nodes and a height of 2, the skewed tree was less balanced even though it contained fewer nodes.
+
+This demonstrated that insertion order affects the structure and efficiency of a Binary Search Tree. A skewed tree can behave more like a linked list, making operations less efficient.
+
+An important edge case was ensuring that the recursive methods stopped correctly when encountering null nodes.
+
+Overall, this phase helped me understand the importance of tree structure, recursive base cases, and testing different insertion orders.
+
