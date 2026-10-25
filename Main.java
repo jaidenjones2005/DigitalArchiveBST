@@ -1,0 +1,19 @@
+public class Main {
+
+    public static void main(String[] args) {
+
+        System.out.println("=== Digital Archive BST ===");
+
+        BinarySearchTree<Integer> archive =
+                new BinarySearchTree<>();
+
+        int[] sampleIds = {50, 25, 75, 10, 30, 60, 85};
+
+        for (int id : sampleIds) {
+            archive.add(id);
+        }
+
+        System.out.println("Archive initialized with sample IDs.");
+        System.out.println("Total IDs inserted: " + sampleIds.length);
+    }
+}
